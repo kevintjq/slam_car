@@ -59,16 +59,13 @@ ament_target_dependencies(Conductor rclcpp tf2_ros mavros_msgs geometry_msgs geo
 # ament_target_dependencies(test_takeoff rclcpp std_msgs geometry_msgs mavros_msgs geographic_msgs)
 # target_link_libraries(test_takeoff Conductor)
 
-add_executable(go test/go.cpp)
-ament_target_dependencies(go rclcpp std_msgs geometry_msgs mavros_msgs geographic_msgs nav_msgs)
-target_link_libraries(go Conductor)
 
 add_executable(fuck_mid360 test/fuck_mid360.cpp)
 ament_target_dependencies(fuck_mid360 rclcpp std_msgs geometry_msgs mavros_msgs geographic_msgs nav_msgs)
 target_link_libraries(fuck_mid360 Conductor)
 # Install the executable
 install(TARGETS
-  go
+  
   fuck_mid360
   # test_takeoff
 
