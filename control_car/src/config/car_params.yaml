@@ -1,0 +1,17 @@
+# config/car_params.yaml
+control_car_node:
+  ros__parameters:
+    # 串口配置
+    serial_port: "/dev/ttyUSB1"
+    baud_rate: 115200
+    
+    # 机器人物理参数 (请根据您的实际小车参数调整)
+    wheel_base: 0.3        # 轮距 (m)
+    wheel_radius: 0.05     # 轮半径 (m)
+    
+    # 速度限制
+    max_wheel_speed: 3.0   # 最大轮速 (rad/s)
+    max_speed_value: 255   # 协议中最大速度值 (0-255)
+    
+    # 调试模式
+    debug_mode: false
